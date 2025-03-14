@@ -1,4 +1,4 @@
-import styles from "./Dashboard.module.css";
+import styles from "../styles/GlobalTableStyles.module.css";
 import Navbar from "../components/Layout/Navbar";
 import Sidebar from "../components/Layout/Sidebar";
 import StatsSection from "../components/Cards/StatsSection";

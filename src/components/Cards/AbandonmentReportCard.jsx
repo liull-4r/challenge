@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import StatCard from "./StatCard";
 
 import styles from "./StatsSection.module.css";
-import { MdCallEnd } from "react-icons/md";
-import { HiPhoneMissedCall } from "react-icons/hi";
-import { SlCallIn } from "react-icons/sl";
-
-import { MdPhoneCallback } from "react-icons/md";
 
 const AbandonmentReportCard = () => {
   const [activeCard, setActiveCard] = useState("Total Campaign");

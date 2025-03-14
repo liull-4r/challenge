@@ -1,7 +1,7 @@
-import styles from "./AbandonmentReportPerformance.module.css";
-import { abandonmentReportData } from "../data/abandonmentReportData";
+import styles from "../../styles/GlobalTableStyles.module.css";
+import { abandonmentReportData } from "../../data/abandonmentReportData";
 
-import ReusableTable from "../components/Tables/ReusableTable";
+import ReusableTable from "./ReusableTable";
 
 const columns = [
   { key: "month", label: "Month" },
@@ -11,9 +11,14 @@ const columns = [
 ];
 
 const AbandonmentReportPerformance = () => {
+  const title = "Abandonment Rate by Interaction Type (SMS vs Robocalling/IVR)";
   return (
     <div className={styles.pageContainer}>
-      <ReusableTable columns={columns} data={abandonmentReportData} />
+      <ReusableTable
+        columns={columns}
+        data={abandonmentReportData}
+        title={title}
+      />
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import styles from "./CampaignsPerformance.module.css";
-import ReusableTable from "../components/Tables/ReusableTable";
-import { campaignPerformance } from "../data/campaignPerformance";
+import styles from "../../styles/GlobalTableStyles.module.css";
+import ReusableTable from "./ReusableTable";
+import { campaignPerformance } from "../../data/campaignPerformance";
 
 const columns = [
   { key: "name", label: "Campaign Name" },
@@ -11,9 +11,14 @@ const columns = [
 ];
 
 const CampaignsPerformance = () => {
+  const title = "Top Performing Campaigns";
   return (
     <div className={styles.pageContainer}>
-      <ReusableTable columns={columns} data={campaignPerformance} />
+      <ReusableTable
+        columns={columns}
+        data={campaignPerformance}
+        title={title}
+      />
     </div>
   );
 };

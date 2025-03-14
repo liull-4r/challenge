@@ -1,12 +1,10 @@
-import styles from "./Campaigns.module.css";
+import styles from "../styles/GlobalTableStyles.module.css";
 import Navbar from "../components/Layout/Navbar";
 import Sidebar from "../components/Layout/Sidebar";
-import StatsSection from "../components/Cards/StatsSection";
 import SubscriberAnalysis from "../components/Charts/SubscriberAnalysis";
 import WeeklySubscriberChart from "../components/Charts/WeeklySubscriberChart";
-import CampaignsPerformance from "./CampaignsPerformance";
+import CampaignsPerformance from "../components/Tables/CampaignsPerformance";
 import SubscriberPieChart from "../components/Charts/SubscriberPieChart";
-import DailySubscriberChart from "../components/Charts/DailySubscriberChart";
 import SMSAnalysisChart from "../components/Charts/SMSAnalysisChart";
 import CampaignsCard from "../components/Cards/CampaignsCard";
 

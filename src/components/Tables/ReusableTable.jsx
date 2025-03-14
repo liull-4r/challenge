@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./ReusableTable.module.css";
 import { FiFilter } from "react-icons/fi";
 
-const ReusableTable = ({ columns, data }) => {
+const ReusableTable = ({ columns, data, title }) => {
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState("asc");
 
@@ -22,7 +22,8 @@ const ReusableTable = ({ columns, data }) => {
   return (
     <div className={styles.tableContainer}>
       <div className={styles.tableHeader}>
-        <h3>Top Performing Campaigns</h3>
+        {/* <h3>Top Performing Campaigns</h3> */}
+        <h5>{title}</h5>
         <div className={styles.tableHeader}>
           <FiFilter className={styles.filterIcon} />
           <p style={{ marginLeft: "10px", cursor: "pointer" }}>Filters</p>
