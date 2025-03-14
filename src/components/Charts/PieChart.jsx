@@ -5,7 +5,7 @@ const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
       <div className={styles.tooltip}>
-        <h4 className={styles.tooltipTitle}>{payload[0].name}</h4>
+        <p className={styles.tooltipTitle}>{payload[0].name}</p>
         <h2 className={styles.tooltipValue}>
           {payload[0].value.toLocaleString()}
         </h2>
@@ -27,7 +27,7 @@ const PieChartComponent = ({ title, data }) => {
       </div>
 
       {/* Donut Chart */}
-      <ResponsiveContainer width={250} height={250}>
+      <ResponsiveContainer width="100%" height={250}>
         <PieChart>
           <Pie
             data={data}

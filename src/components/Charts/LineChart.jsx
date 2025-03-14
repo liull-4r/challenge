@@ -1,3 +1,4 @@
+import React from "react";
 import {
   LineChart,
   Line,
@@ -10,15 +11,17 @@ import {
   ReferenceLine,
   Area,
 } from "recharts";
+import { CiCalendar } from "react-icons/ci";
+import { AiTwotoneExclamationCircle } from "react-icons/ai";
+import { PiDotsThreeBold } from "react-icons/pi";
 import styles from "./LineChart.module.css";
-import { useState } from "react";
 
 const data = [
   { name: "Campaign 1", value: 5200 },
   { name: "Campaign 2", value: 6100 },
   { name: "Campaign 3", value: 7234 },
   { name: "Campaign 4", value: 8800 },
-  { name: "Campaign 5", value: 6500 }, // Ensure Campaign 5 is visible
+  { name: "Campaign 5", value: 6500 },
 ];
 
 const CustomTooltip = ({ active, payload }) => {
@@ -37,17 +40,27 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 const LineChartComponent = () => {
-  const [selectedDate, setSelectedDate] = useState("March 2020");
-
   return (
     <div className={styles.chartContainer}>
+      {/* Header */}
       <div className={styles.header}>
-        <h3>Active Subscriber</h3>
-        <div className={styles.datePicker}>
-          <span>{selectedDate}</span> 📅
+        <div className={styles.leftHeader}>
+          <p className={styles.chartTitle}>
+            Active Subscriber{" "}
+            <AiTwotoneExclamationCircle className={styles.infoIcon} />
+          </p>
+        </div>
+
+        <div className={styles.rightHeader}>
+          <div className={styles.datePicker}>
+            <span>March 2020</span>
+            <CiCalendar className={styles.calendarIcon} />
+          </div>
+          <PiDotsThreeBold className={styles.dotsIcon} />
         </div>
       </div>
 
+      {/* Chart */}
       <ResponsiveContainer width="100%" height={300}>
         <LineChart
           data={data}
@@ -67,17 +80,25 @@ const LineChartComponent = () => {
           {/* Tooltip */}
           <Tooltip content={<CustomTooltip />} />
 
+          {/* Background Gradient */}
+          <defs>
+            <linearGradient id="colorBlue" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#070692" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="#070692" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+
           {/* Shaded Area Under Line */}
           <Area
-            type="monotone"
+            type="basis"
             dataKey="value"
             stroke="none"
-            fill="rgba(44, 73, 216, 0.2)"
+            fill="url(#colorBlue)"
           />
 
           {/* Corrected Zig-Zag Line */}
           <Line
-            type="monotone" /* Fix: Makes curves more natural */
+            type="basis" /* Fix: Makes curves more natural */
             dataKey="value"
             stroke="#2C49D8"
             strokeWidth={3}

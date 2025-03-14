@@ -20,11 +20,9 @@ const Dashboard = () => {
         <LineChartComponent />
 
         <br />
-
         <div className={styles.statsContainer}>
           <PieChartComponent title="Total IVR Rate" data={ivrData} />
           <PieChartComponent title="Total SMS Rate" data={smsData} />
-
           <CampaignsActivity />
         </div>
       </div>

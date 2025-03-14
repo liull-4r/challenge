@@ -10,24 +10,20 @@ import {
   Area,
 } from "recharts";
 import { CiCalendar } from "react-icons/ci";
-
-const data = [
-  { name: "Campaign 1", value: 5200 },
-  { name: "Campaign 2", value: 5800 },
-  { name: "Campaign 3", value: 7234 },
-  { name: "Campaign 4", value: 8100 },
-  { name: "Campaign 5", value: 6900 },
-];
+import { activeSubscriberData } from "../../data/activeSubscriberData";
+import { AiTwotoneExclamationCircle } from "react-icons/ai";
+import { PiDotsThreeBold } from "react-icons/pi";
+import styles from "./ActiveSubscriberChart.module.css";
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-white shadow-lg p-3 rounded-md text-center border border-gray-300">
-        <p className="text-gray-500 text-xs">This month</p>
-        <p className="text-xl font-bold text-gray-900">
+      <div className={styles.tooltip}>
+        <p className={styles.tooltipLabel}>This Month</p>
+        <p className={styles.tooltipValue}>
           {payload[0].value.toLocaleString()}
         </p>
-        <p className="text-gray-500 text-sm">May</p>
+        <p className={styles.tooltipMonth}>May</p>
       </div>
     );
   }
@@ -36,25 +32,28 @@ const CustomTooltip = ({ active, payload }) => {
 
 const ActiveSubscriberChart = () => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-4">
-      {/* Header with Title and Date Picker */}
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold text-gray-900">
-          Active Subscriber
-        </h2>
+    <div className={styles["chart-container"]}>
+      <div className={styles["chart-header"]}>
+        {/* <h2 className={styles["chart-title"]}> */}
+          {/* Active Subscriber */}
+          <AiTwotoneExclamationCircle />
+        {/* </h2> */}
 
-        <div className="flex items-center gap-2 text-gray-500 cursor-pointer">
-          <span className="text-sm">March 2020</span>
-          <CiCalendar className="text-lg" />
+        <div className={styles["chart-controls"]}>
+          <div className={styles["chart-date"]}>
+            <span>March 2020</span>
+            <CiCalendar />
+          </div>
+          <PiDotsThreeBold className={styles["options-icon"]} />
         </div>
       </div>
 
-      {/* Chart */}
-      <ResponsiveContainer width="100%" height={250}>
+      <ResponsiveContainer width="100%" height={300}>
         <LineChart
-          data={data}
+          data={activeSubscriberData}
           margin={{ top: 10, right: 20, left: 0, bottom: 20 }}
         >
+          {/* Gradient Background Under Line */}
           <defs>
             <linearGradient id="colorBlue" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#070692" stopOpacity={0.4} />
@@ -62,25 +61,32 @@ const ActiveSubscriberChart = () => {
             </linearGradient>
           </defs>
 
+          {/* Background Grid */}
           <CartesianGrid
             strokeDasharray="3 3"
             vertical={false}
             strokeOpacity={0.2}
           />
+
+          {/* X & Y Axes */}
           <XAxis dataKey="name" tick={{ fill: "#777", fontSize: 12 }} />
           <YAxis tick={{ fill: "#777", fontSize: 12 }} />
 
+          {/* Custom Tooltip */}
           <Tooltip
             content={<CustomTooltip />}
             cursor={{ strokeDasharray: "3 3" }}
           />
 
+          {/* Background Area Fill */}
           <Area
             type="monotone"
             dataKey="value"
             stroke="none"
             fill="url(#colorBlue)"
           />
+
+          {/* Zigzag Line */}
           <Line
             type="monotone"
             dataKey="value"

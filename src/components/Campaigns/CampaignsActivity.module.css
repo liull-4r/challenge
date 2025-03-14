@@ -4,7 +4,8 @@
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 300px;
+  position: relative;
+  max-width: 400px;
 }
 
 /* Header Title */
@@ -33,7 +34,7 @@
 .bar {
   width: 3px;
   height: 30px;
-  background: #2C49D8;
+  background: #2c49d8;
   border-radius: 5px;
 }
 
@@ -61,10 +62,13 @@
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
-  color: #2C49D8;
+  color: #2c49d8;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .viewAll:hover {

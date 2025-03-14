@@ -12,9 +12,11 @@
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
+  width: 100%; /* Ensures full width */
+  justify-content: space-between;
 }
 
-.chartContainer {
-  display: flex;
-  justify-content: space-between;
+.statsContainer > * {
+  flex: 1; /* Makes each child element take equal width */
+  max-width: 33%; /* Ensures three equal sections */
 }

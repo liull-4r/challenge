@@ -3,8 +3,10 @@
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
+/* Header Styling */
 .chart-header {
   display: flex;
   justify-content: space-between;
@@ -16,6 +18,9 @@
   font-size: 18px;
   font-weight: bold;
   color: #070692;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .chart-controls {
@@ -48,6 +53,7 @@
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .tooltip-label {
@@ -65,4 +71,15 @@
 .tooltip-month {
   font-size: 12px;
   color: #666;
+}
+
+.info-icon {
+  font-size: 16px;
+  color: #070692; /* Ensure it's visible */
+}
+
+.options-icon {
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
 }
