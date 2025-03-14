@@ -68,3 +68,23 @@
   background: #070692 !important;
   color: #ffffff !important;
 }
+
+.answered-icon {
+  color: rgb(5, 248, 5);
+  background-color: #dbe1de;
+}
+
+.no-answer-icon {
+  color: gray;
+   background-color: #dbe1de;
+}
+
+.failed-icon {
+  color: red;
+   background-color: #dbe1de;
+}
+
+.busy-icon {
+  color: navy;
+   background-color: #dbe1de;
+}
