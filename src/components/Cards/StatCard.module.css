@@ -6,11 +6,11 @@
   padding: 15px 20px;
   border-radius: 8px;
   background: #f8f8f8;
-  color: #070692;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   flex: 1; /* Make all cards equal width */
+  position: relative;
 }
 
 /* Active Card */
@@ -19,21 +19,19 @@
   color: #ffffff;
 }
 
-.statCard.active .icon {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
-
-/* Icon Styling */
 .icon {
   font-size: 24px;
-  color: #070692;
-  background: #e5e5e5;
   padding: 10px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.iconBottomRight {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 /* Content Styling */
@@ -49,5 +47,24 @@
 
 .value {
   font-size: 22px;
-  font-weight: bold;
+  color: #2d2d4e;
+  font-weight: 500;
+}
+
+.value.active {
+  color: #ffffff;
+}
+
+.call-icon {
+  background: #070692 !important;
+  color: white !important;
+}
+.message-icon {
+  background: #dde0e7 !important;
+  color: #070692 !important;
+}
+
+.icon.active {
+  background: #070692 !important;
+  color: #ffffff !important;
 }

@@ -15,12 +15,59 @@
   margin-bottom: 15px;
 }
 
+/* Left Title Section */
+.leftHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Chart Title */
+.chartTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0e0e0f;
+  display: flex;
+  align-items: center;
+}
+
+/* Right Controls Section */
+.rightHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 /* Date Picker UI */
 .datePicker {
   background: #f5f5f5;
   padding: 8px 12px;
   border-radius: 6px;
   font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Icons */
+.infoIcon {
+  font-size: 16px;
+  margin-left: 10px;
+  color: #2c49d8;
+}
+
+.calendarIcon {
+  font-size: 18px;
+  color: #666;
+}
+
+.dotsIcon {
+  font-size: 20px;
+  color: #666;
+  margin-left: 10px;
+  border: 0.5px solid #909092;
+  padding: 2px;
   cursor: pointer;
 }
 
@@ -41,7 +88,7 @@
 .tooltipValue {
   font-size: 22px;
   font-weight: bold;
-  color: #2C49D8;
+  color: #2c49d8;
 }
 
 .tooltipSubtitle {
