@@ -23,7 +23,10 @@ const ReusableTable = ({ columns, data }) => {
     <div className={styles.tableContainer}>
       <div className={styles.tableHeader}>
         <h3>Top Performing Campaigns</h3>
-        <FiFilter className={styles.filterIcon} />
+        <div className={styles.tableHeader}>
+          <FiFilter className={styles.filterIcon} />
+          <p style={{ marginLeft: "10px", cursor: "pointer" }}>Filters</p>
+        </div>
       </div>
 
       <div className={styles.tableWrapper}>

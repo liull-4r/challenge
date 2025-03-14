@@ -10,7 +10,7 @@ const SubscriberPieChart = () => {
       <p className={styles.subTitle}>weekly subscriber analysis</p>
 
       {/* Pie Chart */}
-      <ResponsiveContainer width={250} height={250}>
+      <ResponsiveContainer width="100%" height={250}>
         <PieChart>
           <Pie
             data={pieSubscriberData}

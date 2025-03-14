@@ -8,6 +8,7 @@ import CampaignsPerformance from "./CampaignsPerformance";
 import SubscriberPieChart from "../components/Charts/SubscriberPieChart";
 import DailySubscriberChart from "../components/Charts/DailySubscriberChart";
 import SMSAnalysisChart from "../components/Charts/SMSAnalysisChart";
+import CampaignsCard from "../components/Cards/CampaignsCard";
 
 const Campaigns = () => {
   return (
@@ -15,7 +16,7 @@ const Campaigns = () => {
       <Sidebar />
       <div className={styles.main}>
         <Navbar />
-        <StatsSection />
+        <CampaignsCard />
         <br />
 
         <div className={styles.chartContainer}>
@@ -27,10 +28,13 @@ const Campaigns = () => {
         <CampaignsPerformance />
 
         <br />
-        <SubscriberPieChart />
 
-        <DailySubscriberChart />
+        <div className={styles.chartContainer}>
+          <SubscriberAnalysis />
 
+          <SubscriberPieChart />
+        </div>
+        <CampaignsPerformance />
         <SMSAnalysisChart />
 
         <br />
