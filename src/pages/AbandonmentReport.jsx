@@ -1,8 +1,9 @@
 import styles from "./AbandonmentReport.module.css";
 import Navbar from "../components/Layout/Navbar";
 import Sidebar from "../components/Layout/Sidebar";
-import StatsSection from "../components/Cards/StatsSection";
 import AbandonmentTrendChart from "../components/Charts/AbandonmentTrendChart";
+import AbandonmentReportCard from "../components/Cards/AbandonmentReportCard";
+import AbandonmentReportPerformance from "./AbandonmentReportPerformance";
 
 const AbandonmentReport = () => {
   return (
@@ -10,8 +11,10 @@ const AbandonmentReport = () => {
       <Sidebar />
       <div className={styles.main}>
         <Navbar />
-        <StatsSection />
+        <AbandonmentReportCard />
         <br />
+
+        <AbandonmentReportPerformance />
 
         <AbandonmentTrendChart />
       </div>
