@@ -1,0 +1,90 @@
+.pieContainer {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Date Picker UI */
+.datePicker {
+  background: #f5f5f5;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Tooltip */
+.tooltip {
+  background: #2c49d8;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.tooltipTitle {
+  font-size: 16px;
+}
+
+.tooltipValue {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* Legend */
+.legend {
+  display: flex;
+  flex-direction: row; /* Keep legend items in a row */
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  gap: 40px; /* Increase spacing between items */
+}
+
+/* Each legend item */
+.legendItem {
+  display: flex;
+  flex-direction: column; /* Keep text & percentage stacked */
+  align-items: center;
+  text-align: center;
+}
+
+/* Dot and Text on the same line */
+.legendLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Maintain 5px gap between dot & text */
+}
+
+/* Small Colored Dot */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Legend Text */
+.text {
+  font-size: 8px;
+  font-weight: 500;
+}
+
+/* Percentage Styling */
+.percent {
+  font-size: 12px;
+  color: #6b7280; /* Soft gray */
+  margin-top: 3px; /* Space between text & percentage */
+}

@@ -1,0 +1,50 @@
+.chartContainer {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+/* Chart Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Date Picker UI */
+.datePicker {
+  background: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Tooltip Styling */
+.tooltip {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.tooltipTitle {
+  font-size: 14px;
+  color: #999;
+}
+
+.tooltipValue {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2C49D8;
+}
+
+.tooltipSubtitle {
+  font-size: 14px;
+  color: #999;
+}

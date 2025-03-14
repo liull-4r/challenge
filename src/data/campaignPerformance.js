@@ -1,0 +1,42 @@
+export const campaignPerformance = [
+  {
+    id: 1,
+    name: "Campaign 1",
+    status: "Ongoing",
+    successRate: "54%",
+    engagement: "78%",
+    budget: "12,000",
+  },
+  {
+    id: 2,
+    name: "Campaign 2",
+    status: "Ongoing",
+    successRate: "54%",
+    engagement: "78%",
+    budget: "12,000",
+  },
+  {
+    id: 3,
+    name: "Campaign 3",
+    status: "Completed",
+    successRate: "54%",
+    engagement: "78%",
+    budget: "12,000",
+  },
+  {
+    id: 4,
+    name: "Campaign 4",
+    status: "Completed",
+    successRate: "54%",
+    engagement: "78%",
+    budget: "12,000",
+  },
+  {
+    id: 5,
+    name: "Campaign 5",
+    status: "Completed",
+    successRate: "54%",
+    engagement: "78%",
+    budget: "12,000",
+  },
+];

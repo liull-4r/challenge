@@ -1,0 +1,77 @@
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Header Title */
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Campaign List */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Each Campaign Item */
+.campaignItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Left Vertical Bar */
+.bar {
+  width: 3px;
+  height: 30px;
+  background: #2C49D8;
+  border-radius: 5px;
+}
+
+/* Campaign Text */
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Campaign Name */
+.campaignName {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Campaign Details */
+.details {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* View All Activity */
+.viewAll {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  color: #2C49D8;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+/* Arrow Icon */
+.arrowIcon {
+  font-size: 14px;
+}
